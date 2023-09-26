@@ -13,7 +13,7 @@ namespace NagyTibor_BejegyzesProjekt
         static List<Bejegyzes> bejegyzesek = new List<Bejegyzes>();
         static void Main(string[] args)
         {
-            
+
             Bejegyzes B1 = new Bejegyzes("Konstruktor József", "Gazdag lettem!");
             Bejegyzes B2 = new Bejegyzes("Paraméter Gáspár", "Szegény lettem!");
             bejegyzesek.Add(B1);
@@ -28,6 +28,9 @@ namespace NagyTibor_BejegyzesProjekt
             }
             Modosit();
             Console.WriteLine(bejegyzesek[1]);
+            SokLike(); //előző commitban nem hívtam meg
+            KevesLike();
+            
             Console.ReadKey();
         }
         static void BejegyzesIras()
@@ -55,7 +58,7 @@ namespace NagyTibor_BejegyzesProjekt
         static void Beolvas()
         {
             StreamReader sr = new StreamReader("bejegyzesek.csv");
-            while(!sr.EndOfStream)
+            while (!sr.EndOfStream)
             {
                 string[] adatok = sr.ReadLine().Split(';');
                 string szerzo = adatok[0];
@@ -81,7 +84,7 @@ namespace NagyTibor_BejegyzesProjekt
             Console.WriteLine("Adjon meg egy szöveget!");
             szoveg = Convert.ToString(Console.ReadLine());
             bejegyzesek[1].Tartalom = szoveg;
-           
+
         }
         static void Legnepszerubb()
         {
@@ -102,7 +105,7 @@ namespace NagyTibor_BejegyzesProjekt
             bool van = false;
             for (int i = 0; i < bejegyzesek.Count; i++)
             {
-                if (bejegyzesek[i].Likeok>35)
+                if (bejegyzesek[i].Likeok > 35)
                 {
                     van = true;
                 }
@@ -115,6 +118,18 @@ namespace NagyTibor_BejegyzesProjekt
             {
                 Console.WriteLine("Nincs olyan bejegyzés, ami 35-nél több like-al rendelkezdik");
             }
+        }
+        static void KevesLike()
+        {
+            int counter = 0;
+            for (int i = 0; i < bejegyzesek.Count; i++)
+            {
+                if (bejegyzesek[i].Likeok < 15)
+                {
+                    counter++;
+                }
+            }
+            Console.WriteLine("Összesen "+counter+" poszt kapott 15 likenál kevesebbet.");
         }
     }
 }
