@@ -14,11 +14,11 @@ namespace NagyTibor_BejegyzesProjekt
         private DateTime letrejott;
         private DateTime szerkesztve;
 
-        public Bejegyzes(string szerzo, string tartalom, int likeok)
+        public Bejegyzes(string szerzo, string tartalom)
         {
             this.szerzo = szerzo;
             this.tartalom = tartalom;
-            this.likeok 0;
+            this.likeok = 0;
            
         }
 
