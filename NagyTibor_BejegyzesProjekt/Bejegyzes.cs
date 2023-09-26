@@ -32,7 +32,10 @@ namespace NagyTibor_BejegyzesProjekt
         {
             this.likeok++;
         }
+        public override string ToString()
+        {
+            return $"{this.szerzo}-{this.likeok}-{this.letrejott} \n Szerkeztve: {this.szerkesztve} \n {this.tartalom}" ;
+        }
 
-       
     }
 }
