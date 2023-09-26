@@ -34,7 +34,7 @@ namespace NagyTibor_BejegyzesProjekt
         }
         public override string ToString()
         {
-            return $"{this.szerzo}-{this.likeok}-{this.letrejott} \n Szerkeztve: {this.szerkesztve} \n {this.tartalom}" ;
+            return $"{this.szerzo} - {this.likeok} - {this.letrejott} \n Szerkesztve: {this.szerkesztve} \n {this.tartalom} \n\n" ;
         }
 
     }

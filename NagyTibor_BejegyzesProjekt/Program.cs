@@ -19,6 +19,12 @@ namespace NagyTibor_BejegyzesProjekt
             bejegyzesek.Add(B1);
             bejegyzesek.Add(B2);
             BejegyzesIras();
+            Beolvas();
+            LikeOsztas();
+            for (int i = 0; i < bejegyzesek.Count; i++)
+            {
+                Console.WriteLine(bejegyzesek[i]);
+            }
             Console.ReadKey();
         }
         static void BejegyzesIras()
@@ -53,6 +59,17 @@ namespace NagyTibor_BejegyzesProjekt
                 string tartalom = adatok[1];
                 Bejegyzes B1 = new Bejegyzes(szerzo, tartalom);
                 bejegyzesek.Add(B1);
+            }
+        }
+        static void LikeOsztas()
+        {
+            int likeok = (bejegyzesek.Count) * 20;
+            Random r = new Random();
+            int index = 0;
+            for (int i = 0; i < likeok; i++)
+            {
+                index = r.Next(0, bejegyzesek.Count);
+                bejegyzesek[index].Like();
             }
         }
     }
