@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Globalization;
 
 namespace NagyTibor_BejegyzesProjekt
 {
@@ -16,6 +18,8 @@ namespace NagyTibor_BejegyzesProjekt
             Bejegyzes B2 = new Bejegyzes("Paraméter Gáspár", "Szegény lettem!");
             bejegyzesek.Add(B1);
             bejegyzesek.Add(B2);
+            BejegyzesIras();
+            Console.ReadKey();
         }
         static void BejegyzesIras()
         {
@@ -37,6 +41,18 @@ namespace NagyTibor_BejegyzesProjekt
                     Bejegyzes B1 = new Bejegyzes(szerzo, tartalom);
                     bejegyzesek.Add(B1);
                 }
+            }
+        }
+        static void Beolvas()
+        {
+            StreamReader sr = new StreamReader("bejegyzesek.csv");
+            while(!sr.EndOfStream)
+            {
+                string[] adatok = sr.ReadLine().Split(';');
+                string szerzo = adatok[0];
+                string tartalom = adatok[1];
+                Bejegyzes B1 = new Bejegyzes(szerzo, tartalom);
+                bejegyzesek.Add(B1);
             }
         }
     }
