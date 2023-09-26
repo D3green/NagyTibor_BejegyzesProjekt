@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NagyTibor_BejegyzesProjekt", "NagyTibor_BejegyzesProjekt\NagyTibor_BejegyzesProjekt.csproj", "{C128B85A-BBB7-4D8C-9973-0D105730B922}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C128B85A-BBB7-4D8C-9973-0D105730B922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C128B85A-BBB7-4D8C-9973-0D105730B922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C128B85A-BBB7-4D8C-9973-0D105730B922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C128B85A-BBB7-4D8C-9973-0D105730B922}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {222E3B03-BC11-4836-BF53-D2A3EE8774DC}
+	EndGlobalSection
+EndGlobal
