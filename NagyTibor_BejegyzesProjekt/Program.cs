@@ -21,10 +21,13 @@ namespace NagyTibor_BejegyzesProjekt
             BejegyzesIras();
             Beolvas();
             LikeOsztas();
+            //az előző committal az F feladatrészt is megcsináltam hogy lássam hogy kiosztja-e a likeokat
             for (int i = 0; i < bejegyzesek.Count; i++)
             {
                 Console.WriteLine(bejegyzesek[i]);
             }
+            Modosit();
+            Console.WriteLine(bejegyzesek[1]);
             Console.ReadKey();
         }
         static void BejegyzesIras()
@@ -71,6 +74,14 @@ namespace NagyTibor_BejegyzesProjekt
                 index = r.Next(0, bejegyzesek.Count);
                 bejegyzesek[index].Like();
             }
+        }
+        static void Modosit()
+        {
+            string szoveg = "";
+            Console.WriteLine("Adjon meg egy szöveget!");
+            szoveg = Convert.ToString(Console.ReadLine());
+            bejegyzesek[1].Tartalom = szoveg;
+           
         }
     }
 }

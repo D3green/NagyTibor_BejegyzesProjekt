@@ -19,14 +19,23 @@ namespace NagyTibor_BejegyzesProjekt
             this.szerzo = szerzo;
             this.tartalom = tartalom;
             this.likeok = 0;
-           
+           this.letrejott = DateTime.Now; //Ez lemaradt még az első feladatból
         }
 
         public string Szerzo { get => szerzo;}
-        public string Tartalom { get => tartalom; set => tartalom = value; }
+       
         public int Likeok { get => likeok; }
         public DateTime Letrejott { get => letrejott; }
-        public DateTime Szerkesztve { get => szerkesztve; }
+        public string Tartalom
+        {
+            get => tartalom;
+            set
+            {
+                tartalom = value;
+                szerkesztve = DateTime.Now;
+           
+            }
+        }
 
         public void Like()
         {
