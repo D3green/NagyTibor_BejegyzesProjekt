@@ -83,5 +83,20 @@ namespace NagyTibor_BejegyzesProjekt
             bejegyzesek[1].Tartalom = szoveg;
            
         }
+        static void Legnepszerubb()
+        {
+            int max = int.MinValue;
+            int index = 0;
+            for (int i = 0; i < bejegyzesek.Count; i++)
+            {
+                if (max > bejegyzesek[i].Likeok)
+                {
+                    max = bejegyzesek[i].Likeok;
+                    index = i;
+                }
+            }
+            Console.WriteLine("Legtöbb like egy bejegyzésen: " + bejegyzesek[index].Likeok);
+        }
+       
     }
 }
