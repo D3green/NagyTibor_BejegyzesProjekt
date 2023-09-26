@@ -97,6 +97,24 @@ namespace NagyTibor_BejegyzesProjekt
             }
             Console.WriteLine("Legtöbb like egy bejegyzésen: " + bejegyzesek[index].Likeok);
         }
-       
+        static void SokLike()
+        {
+            bool van = false;
+            for (int i = 0; i < bejegyzesek.Count; i++)
+            {
+                if (bejegyzesek[i].Likeok>35)
+                {
+                    van = true;
+                }
+            }
+            if (van)
+            {
+                Console.WriteLine("Van olyan bejegyzés, ami 35-nél több like-al rendelkezdik");
+            }
+            else
+            {
+                Console.WriteLine("Nincs olyan bejegyzés, ami 35-nél több like-al rendelkezdik");
+            }
+        }
     }
 }
